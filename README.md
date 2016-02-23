@@ -14,7 +14,7 @@ In your `build.gradle`:
 
 ```gradle
 dependencies {
-  debugCompile 'me.drakeet.library:crashwoodpecker:0.9.7'
+  debugCompile 'me.drakeet.library:crashwoodpecker:0.9.81'
   releaseCompile 'me.drakeet.library:crashwoodpecker-do-nothing:0.9.7'
 }
 ```
@@ -27,6 +27,7 @@ public class ExampleApplication extends Application {
   @Override public void onCreate() {
     super.onCreate();
     CrashWoodpecker.fly().to(this);
+    // CrashWoodpecker.fly(true /* forceHandleByOrigin */).to(this);
   }
 }
 ```
